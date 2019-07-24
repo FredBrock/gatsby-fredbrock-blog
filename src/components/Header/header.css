@@ -79,6 +79,24 @@
   transform-origin: 130px 106px;
 }
 
+.nav .nav-container .mobile-menu {
+  outline: none;
+}
+
+.nav .nav-container .mobile-menu .bg-white {
+  background-color: #000;
+}
+
+.nav .nav-container .mobile-menu .bg-white.icon-bar1,
+.nav .nav-container .mobile-menu .bg-white .icon-bar2,
+.nav .nav-container .mobile-menu .bg-white .icon-bar3 {
+  width: 20px;
+  height: 2px;
+  margin: 6px 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 @keyframes octocat-wave {
   0%,
   to {

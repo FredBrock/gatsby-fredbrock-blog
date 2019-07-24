@@ -65,6 +65,21 @@
     .github-corner .octo-arm {
       transform-origin: 130px 106px
     }
+    .mobile-menu {
+      outline: none;
+      .bg-white {
+        background-color: #000;
+        &.icon-bar1,
+        .icon-bar2,
+        .icon-bar3 {
+          width: 20px;
+          height: 2px;
+          margin: 6px 0;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+      }
+    }
     @keyframes octocat-wave {
       0%,
       to {

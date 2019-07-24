@@ -1,19 +1,32 @@
 import React from "react"
 import("./header.scss")
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <div className="nav">
-      <div className="nav-container">
-        <a className="nav-logo">Fredbrock</a>
-        <div className="nav-menu">
-          <a className="nav-menu-item">Blog</a>
-          <a className="nav-menu-item">Tags</a>
-          <a className="nav-menu-item">数据统计</a>
-          <a className="nav-menu-item">About</a>
+      <div className="nav-container hidden lg:block">
+        <a href="#" className="nav-logo">
+          Fredbrock
+        </a>
+        <div className="nav-menu ">
+          <a href="#" className="nav-menu-item">
+            Blog
+          </a>
+          <a href="#" className="nav-menu-item">
+            Tags
+          </a>
+          <a href="#" className="nav-menu-item">
+            数据统计
+          </a>
+          <a href="#" className="nav-menu-item">
+            About
+          </a>
         </div>
 
-        <a href="https://github.com/FredBrock" className="github-corner">
+        <a
+          href="https://github.com/FredBrock"
+          className="github-corner hidden lg:block"
+        >
           <svg
             width="60"
             height="60"
@@ -34,6 +47,12 @@ const Header = ({ siteTitle }) => (
             ></path>
           </svg>
         </a>
+
+        <button type="button" className="mobile-menu outline-none lg:hidden">
+          <div className="bg-white icon-bar1"></div>
+          <div className="bg-white icon-bar1"></div>
+          <div className="bg-white icon-bar1"></div>
+        </button>
       </div>
     </div>
   </header>
