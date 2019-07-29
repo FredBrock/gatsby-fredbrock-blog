@@ -20,7 +20,7 @@ collections:
       - { label: "Tags", name: "Tags", widget: "relation", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "Javascript"
-    label: "javascript",
+    label: "javascript"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
