@@ -22,7 +22,7 @@ collections:
   - label: "Blog in English"
     name: "english_posts"
     folder: "_posts"
-    create: "true"
+    create: true
     filter: {field: "language", value: "en"}
     fields:
       - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
