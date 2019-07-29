@@ -4,7 +4,7 @@ import("./post.scss")
 const PostCard = props => {
   console.log(props)
   return (
-    <div className="post">
+    <div className="post mb-5">
       {/* {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <div className="234" key={index}>
           {node.id}

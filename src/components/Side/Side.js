@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import("./side.scss")
 const Side = () => {
   return (
-    <aside className="box-shadow hidden xl:text-sm xl:block xl:w-1/4 xl:px-6">
+    <aside className="box-shadow bg-white hidden py-4 xl:text-sm xl:block xl:w-1/4 xl:px-6">
       <div className="flex flex-col justify-between overflow-y-auto sticky top-16 max-h-(screen-16) pt-12 pb-4 -mt-12">
         <div className="widget title"></div>
         <div className="widget contact-link">
@@ -12,6 +12,7 @@ const Side = () => {
             <li>
               <FontAwesomeIcon
                 icon={["fab", "weibo"]}
+                className="text-xs"
                 size="sm"
               ></FontAwesomeIcon>
               <a href="" className="px-2 hover:text-gray-900">
@@ -21,6 +22,7 @@ const Side = () => {
             <li>
               <FontAwesomeIcon
                 icon={["fab", "github-alt"]}
+                className="text-xs"
                 size="sm"
               ></FontAwesomeIcon>
               <a
