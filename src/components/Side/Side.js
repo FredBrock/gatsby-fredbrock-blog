@@ -10,13 +10,19 @@ const Side = () => {
           <h3 className="pb-4">关于我</h3>
           <ul className="ml-4">
             <li>
-              <FontAwesomeIcon icon={["fab", "weibo"]}></FontAwesomeIcon>
+              <FontAwesomeIcon
+                icon={["fab", "weibo"]}
+                size="sm"
+              ></FontAwesomeIcon>
               <a href="" className="px-2 hover:text-gray-900">
                 新浪微博
               </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={["fab", "github-alt"]}></FontAwesomeIcon>
+              <FontAwesomeIcon
+                icon={["fab", "github-alt"]}
+                size="sm"
+              ></FontAwesomeIcon>
               <a
                 href=""
                 className="px-2 hover:text-gray-900 transition-fast hover:translate-r-2px"
