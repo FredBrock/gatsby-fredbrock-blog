@@ -12,27 +12,23 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-     preview: false
+     preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "Tags", widget: "relation", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Blog in English"
-    name: "english_posts"
-    folder: "_posts"
+  - label: "Blog-Javascript"
+    label: "Javascript",
+    folder: "content/blog"
     create: true
-    filter: {field: "language", value: "en"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: true
     fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
-  - label: "Blog en Español"
-    name: "spanish_posts"
-    folder: "_posts"
-    filter: {field: "language", value: "es"}
-    fields:
-      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "Tags", widget: "relation", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
