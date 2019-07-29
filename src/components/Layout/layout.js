@@ -10,10 +10,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header/header"
 
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
 
 library.add(fab, faCheckSquare, faCoffee)
 
@@ -34,7 +33,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `48px auto 0`,
-          maxWidth: 960,
+          maxWidth: 1280,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
         }}

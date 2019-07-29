@@ -1,2 +1,2 @@
 @variant hover,
-focus{.rotate-0{transform:rotate(0deg)}.rotate-90{transform:rotate(90deg)}}
+focus{.rotate-0{transform:rotate(0deg)}.rotate-90{transform:rotate(90deg)}}.box-show{transition:box-shadow 0.3s ease;box-shadow:0 2px 2px 0 rgba(0,0,0,0.15);padding:15px}.box-show:hover{box-shadow:0 4px 20px 0 rgba(0,0,0,0.15)}.description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-height:3em}

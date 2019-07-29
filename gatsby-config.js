@@ -13,6 +13,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/content/`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -43,7 +51,22 @@ module.exports = {
          * One convention is to place your Netlify CMS customization code in a
          * `src/cms` directory.
          */
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        // modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-source-faker`,
+      // derive schema from faker's options
+      options: {
+        schema: {
+          name: [`firstName`, `lastName`],
+          address: [`streetAddress`, `streetName`, `city`, `state`, `zipCode`],
+          internet: [`email`],
+          lorem: [`paragraph`],
+          phone: [`phoneNumber`],
+        },
+        count: 1, // how many fake objects you need
+        type: `MockData`,
       },
     },
     // {
