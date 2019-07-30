@@ -4,7 +4,7 @@ import("./post.scss")
 const PostCard = props => {
   console.log(props)
   return (
-    <div className="post mb-5">
+    <div className="post">
       {/* {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <div className="234" key={index}>
           {node.id}
@@ -17,7 +17,7 @@ const PostCard = props => {
       {props.postEdge.map(({ node }, index) => {
         return (
           <Link to={node.fields.slug} key={node.id}>
-            <div className="box-show group bg-white">
+            <div className="box-show group bg-white mb-5">
               {node.frontmatter.title}
               <div className="date text-gray-900 group-hover:text-white">
                 <time>{node.frontmatter.date}</time>{" "}
