@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"  # slug 
+  - name: "blog"  # slug
     label: "Blog"   # ui部件名称
     description: "description: 一个实例"
     folder: "content/blog" # 生成文件目录
@@ -46,10 +46,10 @@ collections:
     label: "Customer"
     description: "一个自定义集合"
     folder: 'content/customer'
-    create: true 
+    create: true
     slug: "{{fields.name}}-{{year}}-{{month}}-{{day}}-{{slug}}" # slug 生成
     summary: '{{title}} -- {{year}}/{{month}}/{{day}}' # 摘要信息
-    fields: 
+    fields:
       - { label: "SEO Description",name: 'description', widget: 'text'}
       - { label: "发布时间", name: "Date",widget: 'datetime', dateFormat: 'YYYY-MM-DD',timeFormat: 'x',format: 'YYYY-MM-DD HH:mm',}
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
