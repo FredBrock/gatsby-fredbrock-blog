@@ -32,3 +32,14 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "Tags", widget: "relation", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "css"
+    label: "Css"
+    widget: "relation"
+    collection: "authors"
+    searchFields: ["name.first", "twitterHandle"]
+    valueField: "name.first"
+    displayFields: ["twitterHandle", "followerCount"]
+
+  - name: "qita"
+    label: "Css"
+    widget: "string"
