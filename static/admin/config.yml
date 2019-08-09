@@ -6,14 +6,16 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  - name: "blog"  # slug 
+    label: "Blog"   # ui部件名称
+    description: "description: 一个实例"
+    folder: "content/blog" # 生成文件目录
+    create: true  # 是否允许创建新文件
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # slug 生成
+    summary: '{{title}} -- {{year}}/{{month}}/{{day}}' # 摘要信息
     editor:
      preview: true
-    fields:
+    fields:  # 生成文档字段信息
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
@@ -32,3 +34,22 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "Tags", widget: "relation", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "css"
+    label: "Css"
+    widget: "relation"
+    collection: "authors"
+    searchFields: ["name.first", "twitterHandle"]
+    valueField: "name.first"
+    displayFields: ["twitterHandle", "followerCount"]
+
+  - name: "customer"
+    label: "Customer"
+    description: "一个自定义集合"
+    folder: 'content/customer'
+    create: true 
+    slug: "{{fields.name}}-{{year}}-{{month}}-{{day}}-{{slug}}" # slug 生成
+    summary: '{{title}} -- {{year}}/{{month}}/{{day}}' # 摘要信息
+    fields: 
+      - { label: "SEO Description",name: 'description', widget: 'text'}
+      - { label: "发布时间", name: "Date",widget: 'datetime', dateFormat: 'YYYY-MM-DD',timeFormat: 'x',format: 'YYYY-MM-DD HH:mm',}
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }

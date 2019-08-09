@@ -14,6 +14,7 @@ focus {
 .box-show {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  // box-shadow: 0 0 0.7142857142857143rem #cccccc;
   padding: 15px;
   &:hover {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
