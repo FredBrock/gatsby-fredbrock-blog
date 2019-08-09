@@ -34,15 +34,6 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "Tags", widget: "relation", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "css"
-    label: "Css"
-    widget: "relation"
-    folder: 'content/css'
-    collection: "authors"
-    searchFields: ["name.first", "twitterHandle"]
-    valueField: "name.first"
-    displayFields: ["twitterHandle", "followerCount"]
-
   - name: "customer"
     label: "Customer"
     description: "一个自定义集合"
