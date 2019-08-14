@@ -6,3 +6,21 @@
   margin: 0 auto;
   min-height: 700px;
 }
+
+.message,
+.heads-up {
+  border: 1px solid black;
+}
+
+.info,
+.heads-up {
+  font-size: 1.5rem;
+}
+
+.heads-up {
+  background: red;
+}
+
+:root {
+  --font-family-monospace: Menlo, Consolas, Courier New, monospace;
+}
