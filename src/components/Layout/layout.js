@@ -17,17 +17,19 @@ import("./layout.scss")
 
 library.add(fab, faCheckSquare, faCoffee)
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ changeOpen, children }) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+  // console.log(data)
+  // console.log(context)
+  // console.log(changeOpen)
   return (
     <>
       <Header />

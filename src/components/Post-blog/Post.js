@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import("./post.scss")
 const PostCard = props => {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="post">
       {/* {data.allMarkdownRemark.edges.map(({ node }, index) => (

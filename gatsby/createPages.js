@@ -1,10 +1,32 @@
-const path = require(`path`)
+// const path = require(`path`)
 const slash = require("slash")
-module.exports = ({ graphql, actions }) => {
+module.exports = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(
     `src/templates/template-blog-post/template-blog-post.js`
   )
+
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+          totalCount
+        }
+      }
+    `
+  )
+
+  console.log(result)
   return graphql(
     `
       {

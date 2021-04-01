@@ -1,0 +1,23 @@
+.menu-side {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 260px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  height: 100%;
+  top: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+  transform: translate(-280px, 0);
+}
+
+.open.menu-side {
+  position: fixed;
+  transform: translate(0, 0);
+}
